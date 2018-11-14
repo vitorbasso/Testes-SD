@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package simpleServer;
+
+service SimpleServer{
+    rpc Service (SimpleServerRequest) returns (SimpleServerResponse) {}
+}
+
+message SimpleServerRequest{
+    string type = 1;
+    int32 id = 2;
+    string data = 3;
+}
+
+message SimpleServerResponse{
+    string response = 1;
+}
